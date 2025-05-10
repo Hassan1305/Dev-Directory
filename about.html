@@ -1,207 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - Pak Dev Directory</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <style>
-        .hero-pattern {
-            background-color: #075e54;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
+      .hero-pattern {
+        background-color: #075e54;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
     </style>
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
     <!-- Navigation -->
     <nav class="bg-white shadow-md">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <span class="text-2xl font-bold text-green-600">Pak Dev Directory</span>
-                    </div>
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="index.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            Directory
-                        </a>
-                        <a href="about.html" class="border-green-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            About Us
-                        </a>
-                        <a href="https://github.com/Hassan1305/pak-dev-directory" target="_blank" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                            <i class="fab fa-github mr-1"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex">
+            <div class="flex-shrink-0 flex items-center">
+              <span class="text-2xl font-bold text-green-600"
+                >Pak Dev Directory</span
+              >
             </div>
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <a
+                href="index.html"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                Directory
+              </a>
+              <a
+                href="about.html"
+                class="border-green-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                About Us
+              </a>
+              <a
+                href="https://github.com/Hassan1305/Dev-Directory"
+                target="_blank"
+                class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+              >
+                <i class="fab fa-github mr-1"></i> GitHub
+              </a>
+            </div>
+          </div>
+          <div class="-mr-2 flex items-center sm:hidden">
+            <button
+              id="mobile-menu-button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
 
-        <!-- Mobile menu, show/hide based on menu state -->
-        <div id="mobile-menu" class="sm:hidden hidden">
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="index.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
-                    Directory
-                </a>
-                <a href="about.html" class="bg-green-50 border-green-500 text-green-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
-                    About Us
-                </a>
-                <a href="https://github.com/Hassan1305/pak-dev-directory" target="_blank" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
-                    <i class="fab fa-github mr-1"></i> GitHub
-                </a>
-            </div>
+      <!-- Mobile menu, show/hide based on menu state -->
+      <div id="mobile-menu" class="sm:hidden hidden">
+        <div class="pt-2 pb-3 space-y-1">
+          <a
+            href="index.html"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >
+            Directory
+          </a>
+          <a
+            href="about.html"
+            class="bg-green-50 border-green-500 text-green-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >
+            About Us
+          </a>
+          <a
+            href="https://github.com/Hassan1305/Dev-Directory"
+            target="_blank"
+            class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+          >
+            <i class="fab fa-github mr-1"></i> GitHub
+          </a>
         </div>
+      </div>
     </nav>
 
     <!-- Hero section -->
     <div class="hero-pattern text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-            <h1 class="text-3xl md:text-4xl font-bold mb-4">About Pak Dev Directory</h1>
-            <p class="text-xl opacity-90 max-w-3xl mb-8">
-                Connecting tech talent with opportunities in Pakistan's growing software industry.
-            </p>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">
+          About Pak Dev Directory
+        </h1>
+        <p class="text-xl opacity-90 max-w-3xl mb-8">
+          Connecting tech talent with opportunities in Pakistan's growing
+          software industry.
+        </p>
+      </div>
     </div>
 
     <!-- About content -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <div class="p-6 md:p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Mission</h2>
-                
-                <div class="prose max-w-none">
-                    <p class="mb-6">
-                        Pak Dev Directory is an open-source project aimed at creating a comprehensive, verified directory of software companies across Pakistan. Our mission is to bridge the gap between Pakistani tech talent and the companies that need them.
-                    </p>
-                    
-                    <p class="mb-6">
-                        For students, job seekers, and freelancers, finding legitimate software companies can be challenging. Many companies don't have an online presence or updated contact information. Pak Dev Directory solves this problem by maintaining an up-to-date list of software houses with verified contact details and locations.
-                    </p>
-                    
-                    <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Why We Created This</h3>
-                    
-                    <p class="mb-6">
-                        Pakistan's tech ecosystem is growing rapidly, but the lack of centralized information makes it difficult for talent to connect with opportunities. We created this directory to:
-                    </p>
-                    
-                    <ul class="list-disc ml-6 mb-6 space-y-2">
-                        <li>Help students find internships and entry-level positions</li>
-                        <li>Support job seekers in discovering potential employers</li>
-                        <li>Enable freelancers to find local clients and partnerships</li>
-                        <li>Showcase Pakistan's growing tech ecosystem</li>
-                        <li>Provide a community resource that benefits everyone</li>
-                    </ul>
-                    
-                    <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">How It Works</h3>
-                    
-                    <p class="mb-6">
-                        Our directory is powered by a simple but effective system:
-                    </p>
-                    
-                    <ol class="list-decimal ml-6 mb-6 space-y-2">
-                        <li>We collect verified information about software houses in Pakistan</li>
-                        <li>The data is stored in a JSON file in our GitHub repository</li>
-                        <li>Our web interface provides easy searching and filtering</li>
-                        <li>Companies are displayed with their location, contact information, and map links</li>
-                    </ol>
-                    
-                    <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">Open Source & Community Driven</h3>
-                    
-                    <p class="mb-6">
-                        Pak Dev Directory is 100% open source. We believe in the power of community collaboration to create something valuable for everyone. You can contribute to this project by:
-                    </p>
-                    
-                    <ul class="list-disc ml-6 mb-6 space-y-2">
-                        <li>Adding new companies to our database</li>
-                        <li>Updating information about existing companies</li>
-                        <li>Improving the website's design and functionality</li>
-                        <li>Reporting issues or suggesting enhancements</li>
-                        <li>Sharing the directory with your network</li>
-                    </ul>
-                    
-                    <div class="bg-green-50 border-l-4 border-green-400 p-4 mt-8">
-                        <div class="flex">
-                            <div class="flex-shrink-0">
-                                <i class="fas fa-code text-green-400"></i>
-                            </div>
-                            <div class="ml-3">
-                                <h3 class="text-lg font-medium text-green-800">Get Involved</h3>
-                                <div class="mt-2 text-green-700">
-                                    <p>
-                                        Visit our <a href="https://github.com/Hassan1305/pak-dev-directory" class="font-medium underline">GitHub repository</a> to contribute to this project. Every contribution helps make this resource better for the entire Pakistani tech community.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-6 md:p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Our Mission</h2>
+
+          <div class="prose max-w-none">
+            <p class="mb-6">
+              Pak Dev Directory is an open-source project aimed at creating a
+              comprehensive, verified directory of software companies across
+              Pakistan. Our mission is to bridge the gap between Pakistani tech
+              talent and the companies that need them.
+            </p>
+
+            <p class="mb-6">
+              For students, job seekers, and freelancers, finding legitimate
+              software companies can be challenging. Many companies don't have
+              an online presence or updated contact information. Pak Dev
+              Directory solves this problem by maintaining an up-to-date list of
+              software houses with verified contact details and locations.
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">
+              Why We Created This
+            </h3>
+
+            <p class="mb-6">
+              Pakistan's tech ecosystem is growing rapidly, but the lack of
+              centralized information makes it difficult for talent to connect
+              with opportunities. We created this directory to:
+            </p>
+
+            <ul class="list-disc ml-6 mb-6 space-y-2">
+              <li>Help students find internships and entry-level positions</li>
+              <li>Support job seekers in discovering potential employers</li>
+              <li>Enable freelancers to find local clients and partnerships</li>
+              <li>Showcase Pakistan's growing tech ecosystem</li>
+              <li>Provide a community resource that benefits everyone</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">
+              How It Works
+            </h3>
+
+            <p class="mb-6">
+              Our directory is powered by a simple but effective system:
+            </p>
+
+            <ol class="list-decimal ml-6 mb-6 space-y-2">
+              <li>
+                We collect verified information about software houses in
+                Pakistan
+              </li>
+              <li>
+                The data is stored in a JSON file in our GitHub repository
+              </li>
+              <li>Our web interface provides easy searching and filtering</li>
+              <li>
+                Companies are displayed with their location, contact
+                information, and map links
+              </li>
+            </ol>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-8 mb-4">
+              Open Source & Community Driven
+            </h3>
+
+            <p class="mb-6">
+              Pak Dev Directory is 100% open source. We believe in the power of
+              community collaboration to create something valuable for everyone.
+              You can contribute to this project by:
+            </p>
+
+            <ul class="list-disc ml-6 mb-6 space-y-2">
+              <li>Adding new companies to our database</li>
+              <li>Updating information about existing companies</li>
+              <li>Improving the website's design and functionality</li>
+              <li>Reporting issues or suggesting enhancements</li>
+              <li>Sharing the directory with your network</li>
+            </ul>
+
+            <div class="bg-green-50 border-l-4 border-green-400 p-4 mt-8">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-code text-green-400"></i>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Contact section -->
-        <div class="mt-12 bg-white shadow-md rounded-lg overflow-hidden">
-            <div class="p-6 md:p-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
-                
-                <p class="mb-6">
-                    Have questions, suggestions, or want to contribute to the project? Reach out to us through GitHub issues or contribute directly with a pull request.
-                </p>
-                
-                <div class="mt-6">
-                    <a href="https://github.com/Hassan1305/pak-dev-directory/issues" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                        <i class="fab fa-github mr-2"></i> Open an Issue
-                    </a>
+                <div class="ml-3">
+                  <h3 class="text-lg font-medium text-green-800">
+                    Get Involved
+                  </h3>
+                  <div class="mt-2 text-green-700">
+                    <p>
+                      Visit our
+                      <a
+                        href="https://github.com/Hassan1305/Dev-Directory"
+                        class="font-medium underline"
+                        >GitHub repository</a
+                      >
+                      to contribute to this project. Every contribution helps
+                      make this resource better for the entire Pakistani tech
+                      community.
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Contact section -->
+      <div class="mt-12 bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="p-6 md:p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
+
+          <p class="mb-6">
+            Have questions, suggestions, or want to contribute to the project?
+            Reach out to us through GitHub issues or contribute directly with a
+            pull request.
+          </p>
+
+          <div class="mt-6">
+            <a
+              href="https://github.com/Hassan1305/Dev-Directory/issues"
+              target="_blank"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+            >
+              <i class="fab fa-github mr-2"></i> Open an Issue
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <h2 class="text-xl font-bold">Pak Dev Directory</h2>
-                    <p class="mt-2 text-gray-300 text-sm">
-                        An open-source directory of software houses in Pakistan.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-sm font-semibold uppercase tracking-wider">Links</h3>
-                    <div class="mt-4 space-y-2">
-                        <a href="index.html" class="text-gray-300 hover:text-white block">Home</a>
-                        <a href="about.html" class="text-gray-300 hover:text-white block">About Us</a>
-                        <a href="https://github.com/Hassan1305/pak-dev-directory" target="_blank" class="text-gray-300 hover:text-white block">
-                            <i class="fab fa-github mr-1"></i> GitHub
-                        </a>
-                    </div>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-xl font-bold">Pak Dev Directory</h2>
+            <p class="mt-2 text-gray-300 text-sm">
+              An open-source directory of software houses in Pakistan.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wider">
+              Links
+            </h3>
+            <div class="mt-4 space-y-2">
+              <a href="index.html" class="text-gray-300 hover:text-white block"
+                >Home</a
+              >
+              <a href="about.html" class="text-gray-300 hover:text-white block"
+                >About Us</a
+              >
+              <a
+                href="https://github.com/Hassan1305/Dev-Directory"
+                target="_blank"
+                class="text-gray-300 hover:text-white block"
+              >
+                <i class="fab fa-github mr-1"></i> GitHub
+              </a>
             </div>
-            <div class="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between">
-                <p class="text-gray-300 text-sm">
-                    &copy; 2025 Pak Dev Directory. All rights reserved.
-                </p>
-                <p class="text-gray-300 text-sm mt-2 md:mt-0">
-                    Made with <span class="text-red-500">❤</span> for the Pakistani dev community
-                </p>
-            </div>
+          </div>
         </div>
+        <div
+          class="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between"
+        >
+          <p class="text-gray-300 text-sm">
+            &copy; 2025 Pak Dev Directory. All rights reserved.
+          </p>
+          <p class="text-gray-300 text-sm mt-2 md:mt-0">
+            Made with <span class="text-red-500">❤</span> for the Pakistani dev
+            community
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
         });
     </script>
-</body>
+  </body>
 </html>
