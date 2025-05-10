@@ -1,0 +1,212 @@
+[
+  {
+    "name": "Systems Limited",
+    "email": "info@systemsltd.com",
+    "city": "Lahore",
+    "location": "E-1, Sehjpal Road, Gulberg III",
+    "mapLink": "https://maps.app.goo.gl/srD49CTFaBSxdC1E8"
+  },
+  {
+    "name": "10Pearls",
+    "email": "info@10pearls.com",
+    "city": "Karachi",
+    "location": "17th Floor, The Harbor Front Building",
+    "mapLink": "https://maps.app.goo.gl/yCijSjA5LuPKQk7H7"
+  },
+  {
+    "name": "Arbisoft",
+    "email": "contact@arbisoft.com",
+    "city": "Lahore",
+    "location": "24-N Gulberg II",
+    "mapLink": "https://maps.app.goo.gl/DtnRcX5jcwXbqcWs8"
+  },
+  {
+    "name": "NetSol Technologies",
+    "email": "info@netsoltech.com",
+    "city": "Lahore",
+    "location": "NetSol IT Village, Lahore Ring Road",
+    "mapLink": "https://maps.app.goo.gl/NxMHHwNW9J1weLfj8"
+  },
+  {
+    "name": "Folio3",
+    "email": "info@folio3.com",
+    "city": "Karachi",
+    "location": "3rd Floor, Bahria Complex II, MT Khan Road",
+    "mapLink": "https://maps.app.goo.gl/hGTrbAWcdYrRWP9j6"
+  },
+  {
+    "name": "TPS",
+    "email": "info@tpsonline.com",
+    "city": "Karachi",
+    "location": "TPS Tower, Shahra-e-Faisal",
+    "mapLink": "https://maps.app.goo.gl/yLXH6pL8sgBbAgwK9"
+  },
+  {
+    "name": "Securiti.ai",
+    "email": "contact@securiti.ai",
+    "city": "Lahore",
+    "location": "Gulberg III",
+    "mapLink": "https://maps.app.goo.gl/75e2pUYfWBDmhF2j8"
+  },
+  {
+    "name": "Afiniti",
+    "email": "info@afiniti.com",
+    "city": "Lahore",
+    "location": "Emporium Mall, Abdul Haque Road",
+    "mapLink": "https://maps.app.goo.gl/R7Lbq5eQHvVxn8eR7"
+  },
+  {
+    "name": "Gaditek",
+    "email": "careers@gaditek.com",
+    "city": "Karachi",
+    "location": "Gaditek House, 15th Floor, Sky Tower",
+    "mapLink": "https://maps.app.goo.gl/vgTvKCGtKiBLmT8u5"
+  },
+  {
+    "name": "DevNation",
+    "email": "hello@devnation.com",
+    "city": "Karachi",
+    "location": "Z Square, DHA Phase 8",
+    "mapLink": "https://maps.app.goo.gl/PEKcBXTbJy4WMkUE8"
+  },
+  {
+    "name": "Techlogix",
+    "email": "info@techlogix.com",
+    "city": "Lahore",
+    "location": "300 Y Block, DHA Phase 3",
+    "mapLink": "https://maps.app.goo.gl/nQZFfqZ9zmvyTqKW6"
+  },
+  {
+    "name": "Contour Software",
+    "email": "info@contour-software.com",
+    "city": "Lahore",
+    "location": "Tufail Road, Lahore Cantt",
+    "mapLink": "https://maps.app.goo.gl/f32GJeGwpB6w1pu89"
+  },
+  {
+    "name": "Xavor Corporation",
+    "email": "info@xavor.com",
+    "city": "Lahore",
+    "location": "90 Tipu Block, New Garden Town",
+    "mapLink": "https://maps.app.goo.gl/kzKYVykgwVvLpKLb9"
+  },
+  {
+    "name": "Emerald Labs",
+    "email": "contact@emeraldlabs.com",
+    "city": "Islamabad",
+    "location": "Plot 27, Sector F-10/1",
+    "mapLink": "https://maps.app.goo.gl/RxkZEq5gX5tNWyW86"
+  },
+  {
+    "name": "Excellence Delivered (ExD)",
+    "email": "info@exdpk.com",
+    "city": "Islamabad",
+    "location": "Plot 43, St 5, G 10/3",
+    "mapLink": "https://maps.app.goo.gl/ZRZw1GnvbPR6yUWB9"
+  },
+  {
+    "name": "Conovo Technologies",
+    "email": "info@conovo.com",
+    "city": "Islamabad",
+    "location": "Plot 152, Industrial Triangle, Kahuta Road",
+    "mapLink": "https://maps.app.goo.gl/6UtUgNKMbFCcfDSa9"
+  },
+  {
+    "name": "Codebase Technologies",
+    "email": "info@codebtech.com",
+    "city": "Karachi",
+    "location": "14th Floor, Bahria Complex II",
+    "mapLink": "https://maps.app.goo.gl/d8aN7e47PFi2fPJn9"
+  },
+  {
+    "name": "Mindstorm Studios",
+    "email": "info@mindstormstudios.com",
+    "city": "Lahore",
+    "location": "11-T Gulberg II",
+    "mapLink": "https://maps.app.goo.gl/JoZRRRCWCJAC5bwd8"
+  },
+  {
+    "name": "i2c Inc.",
+    "email": "info@i2cinc.com",
+    "city": "Lahore",
+    "location": "Tufail Road, Lahore Cantt",
+    "mapLink": "https://maps.app.goo.gl/M8v5BPgCskMgj5a47"
+  },
+  {
+    "name": "Red Buffer",
+    "email": "info@redbuffer.net",
+    "city": "Lahore",
+    "location": "Canal Bank, Johar Town",
+    "mapLink": "https://maps.app.goo.gl/M6YpPMVaEWscuXqW7"
+  },
+  {
+    "name": "Teradata",
+    "email": "info.pakistan@teradata.com",
+    "city": "Islamabad",
+    "location": "Plot 17, Sector I-9/3",
+    "mapLink": "https://maps.app.goo.gl/yyHhHn6EDdj23hQP9"
+  },
+  {
+    "name": "Tkxel",
+    "email": "info@tkxel.com",
+    "city": "Islamabad",
+    "location": "Plot 27, Sector F-10/1",
+    "mapLink": "https://maps.app.goo.gl/jWLMg1EVmVZtrGXR9"
+  },
+  {
+    "name": "Nextbridge",
+    "email": "contact@nextbridge.com",
+    "city": "Lahore",
+    "location": "Barkat Market, New Garden Town",
+    "mapLink": "https://maps.app.goo.gl/Hp5RzfQo5pMJR7sN7"
+  },
+  {
+    "name": "Coeus Solutions",
+    "email": "info@coeus-solutions.de",
+    "city": "Islamabad",
+    "location": "Plot 119, Street 2, I-10/3",
+    "mapLink": "https://maps.app.goo.gl/Vx9rg8sR9WrzL6YE7"
+  },
+  {
+    "name": "VentureDive",
+    "email": "info@venturedive.com",
+    "city": "Karachi",
+    "location": "26th Floor, Sky Tower, Clifton",
+    "mapLink": "https://maps.app.goo.gl/cB5o6Vos1xEYBsKZ9"
+  },
+  {
+    "name": "Cloudtek",
+    "email": "info@cloudtek.io",
+    "city": "Karachi",
+    "location": "15th Floor, Bahria Complex II",
+    "mapLink": "https://maps.app.goo.gl/7H8x3vWN2EUWbzXG8"
+  },
+  {
+    "name": "IBEX",
+    "email": "careers.pk@ibex.co",
+    "city": "Lahore",
+    "location": "Thokar Niaz Baig",
+    "mapLink": "https://maps.app.goo.gl/HLHMqCd9WYNkkVnj8"
+  },
+  {
+    "name": "NetSol Connect",
+    "email": "info@netsolconnect.com",
+    "city": "Lahore",
+    "location": "NetSol Avenue, Ghazi Road",
+    "mapLink": "https://maps.app.goo.gl/KDTAWwHx2dS1Vwnh9"
+  },
+  {
+    "name": "DPL",
+    "email": "info@dpl.com.pk",
+    "city": "Karachi",
+    "location": "20-C, PECHS",
+    "mapLink": "https://maps.app.goo.gl/c7dg6cMtFXQjehGT9"
+  },
+  {
+    "name": "Mentor Graphics",
+    "email": "info.pk@mentor.com",
+    "city": "Lahore",
+    "location": "Tufail Road, Lahore Cantt",
+    "mapLink": "https://maps.app.goo.gl/v1GkLEpYZcEA6Vqi6"
+  }
+]
