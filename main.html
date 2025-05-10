@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pak Dev Directory - Find Software Houses in Pakistan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .company-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .hero-pattern {
+            background-color: #075e54;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-green-600">Pak Dev Directory</span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-green-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            Directory
+                        </a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            About Us
+                        </a>
+                        <a href="https://github.com/Hassan1305/pak-dev-directory" target="_blank" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
+                            <i class="fab fa-github mr-1"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="sm:hidden hidden">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="index.html" class="bg-green-50 border-green-500 text-green-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                    Directory
+                </a>
+                <a href="about.html" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                    About Us
+                </a>
+                <a href="https://github.com/yourusername/pak-dev-directory" target="_blank" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">
+                    <i class="fab fa-github mr-1"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section -->
+    <div class="hero-pattern text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Find Software Houses in Pakistan</h1>
+            <p class="text-xl opacity-90 mb-8 max-w-3xl">
+                The most comprehensive open-source directory of software companies in Pakistan for job seekers, freelancers, and students.
+            </p>
+            
+            <!-- Search and filter -->
+            <div class="bg-white p-4 rounded-lg shadow-md max-w-4xl">
+                <div class="md:flex space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="relative md:flex-1">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <input id="search-input" type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Search by company name or email...">
+                    </div>
+                    <div class="md:w-1/4">
+                        <select id="city-filter" class="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md">
+                            <option value="">All Cities</option>
+                            <!-- Cities will be populated from data.json -->
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-2 text-right">
+                    <span id="results-count" class="text-sm text-gray-600">Showing all companies</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Company directory -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div id="loading" class="text-center py-10">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+            <p class="mt-2 text-gray-600">Loading software houses...</p>
+        </div>
+        
+        <div id="companies-container" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Companies will be populated here from data.json -->
+        </div>
+        
+        <div id="no-results" class="hidden text-center py-10">
+            <div class="text-gray-400 mb-4">
+                <i class="fas fa-search fa-3x"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-700">No companies found</h3>
+            <p class="text-gray-500 mt-2">Try adjusting your search or filter</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-xl font-bold">Pak Dev Directory</h2>
+                    <p class="mt-2 text-gray-300 text-sm">
+                        An open-source directory of software houses in Pakistan.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider">Links</h3>
+                    <div class="mt-4 space-y-2">
+                        <a href="index.html" class="text-gray-300 hover:text-white block">Home</a>
+                        <a href="about.html" class="text-gray-300 hover:text-white block">About Us</a>
+                        <a href="https://github.com/yourusername/pak-dev-directory" target="_blank" class="text-gray-300 hover:text-white block">
+                            <i class="fab fa-github mr-1"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-300 text-sm">
+                    &copy; 2025 Pak Dev Directory. All rights reserved.
+                </p>
+                <p class="text-gray-300 text-sm mt-2 md:mt-0">
+                    Made with <span class="text-red-500">❤</span> for the Pakistani dev community
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Fetch and process data
+        let allCompanies = [];
+        let filteredCompanies = [];
+        
+        async function fetchData() {
+            try {
+                const response = await fetch('data.json');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                allCompanies = await response.json();
+                filteredCompanies = [...allCompanies];
+                
+                // Populate cities dropdown
+                populateCityFilter();
+                
+                // Display companies
+                displayCompanies(allCompanies);
+                
+                // Hide loading, show companies
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('companies-container').classList.remove('hidden');
+                updateResultsCount();
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('loading').innerHTML = `
+                    <div class="text-red-500">
+                        <i class="fas fa-exclamation-circle fa-3x"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700 mt-4">Failed to load data</h3>
+                    <p class="text-gray-500 mt-2">Please try again later or check the data.json file.</p>
+                `;
+            }
+        }
+        
+        function populateCityFilter() {
+            const cityFilter = document.getElementById('city-filter');
+            const cities = [...new Set(allCompanies.map(company => company.city))].sort();
+            
+            cities.forEach(city => {
+                const option = document.createElement('option');
+                option.value = city;
+                option.textContent = city;
+                cityFilter.appendChild(option);
+            });
+        }
+        
+        function displayCompanies(companies) {
+            const container = document.getElementById('companies-container');
+            const noResults = document.getElementById('no-results');
+            
+            container.innerHTML = '';
+            
+            if (companies.length === 0) {
+                container.classList.add('hidden');
+                noResults.classList.remove('hidden');
+                return;
+            }
+            
+            container.classList.remove('hidden');
+            noResults.classList.add('hidden');
+            
+            companies.forEach(company => {
+                const card = document.createElement('div');
+                card.className = 'company-card bg-white rounded-lg shadow-md overflow-hidden';
+                
+                const mapLink = company.mapLink ? 
+                    `<a href="${company.mapLink}" target="_blank" class="text-green-600 hover:text-green-800 inline-flex items-center">
+                        <i class="fas fa-map-marker-alt mr-1"></i> View on Map
+                    </a>` : 
+                    `<span class="text-gray-400 inline-flex items-center">
+                        <i class="fas fa-map-marker-alt mr-1"></i> Map not available
+                    </span>`;
+                
+                card.innerHTML = `
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">${company.name}</h3>
+                        <div class="text-sm text-gray-600 space-y-2">
+                            <p class="flex items-start">
+                                <i class="fas fa-envelope w-5 text-gray-400 mt-1"></i>
+                                <span class="ml-2">${company.email}</span>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fas fa-map-pin w-5 text-gray-400 mt-1"></i>
+                                <span class="ml-2">${company.city}</span>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fas fa-location-arrow w-5 text-gray-400 mt-1"></i>
+                                <span class="ml-2">${company.location}</span>
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            ${mapLink}
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+        
+        function updateResultsCount() {
+            const count = document.getElementById('results-count');
+            if (filteredCompanies.length === allCompanies.length) {
+                count.textContent = `Showing all ${allCompanies.length} companies`;
+            } else {
+                count.textContent = `Showing ${filteredCompanies.length} of ${allCompanies.length} companies`;
+            }
+        }
+        
+        // Filter companies based on search input and city selection
+        function filterCompanies() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const selectedCity = document.getElementById('city-filter').value;
+            
+            filteredCompanies = allCompanies.filter(company => {
+                const matchesSearch = 
+                    company.name.toLowerCase().includes(searchTerm) || 
+                    company.email.toLowerCase().includes(searchTerm);
+                
+                const matchesCity = !selectedCity || company.city === selectedCity;
+                
+                return matchesSearch && matchesCity;
+            });
+            
+            displayCompanies(filteredCompanies);
+            updateResultsCount();
+        }
+        
+        // Event listeners
+        document.getElementById('search-input').addEventListener('input', filterCompanies);
+        document.getElementById('city-filter').addEventListener('change', filterCompanies);
+        
+        // Load data when page loads
+        window.addEventListener('DOMContentLoaded', fetchData);
+    </script>
+</body>
+</html>
