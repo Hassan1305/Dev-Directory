@@ -1,13 +1,4 @@
-{
-  "metadata": {
-    "extraction_date": "2025-05-11",
-    "total_companies": 2671,
-    "cities": {
-      "Karachi": 1921,
-      "Lahore": 750
-    }
-  },
-  "companies": [
+[
     {
       "name": "1 Social Media",
       "email": "hr@1socialmediaagency.com",
@@ -34733,3 +34724,4 @@
     }
   ]
 }
+]
