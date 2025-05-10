@@ -18,6 +18,25 @@
             background-color: #075e54;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        .modal-active {
+            overflow-y: visible !important;
+        }
+        .location-tag {
+            transition: all 0.2s;
+        }
+        .location-tag:hover {
+            background-color: #047857;
+        }
+        /* Fix for search text visibility */
+        #search-input::placeholder {
+            color: #9CA3AF;
+        }
+        #search-input {
+            color: #111827;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -119,8 +138,33 @@
         </div>
     </div>
 
+    <!-- Company Description Modal -->
+    <div id="modal-container" class="hidden fixed inset-0 z-50 flex items-center justify-center">
+        <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto max-h-full">
+            <!-- Modal Content -->
+            <div class="modal-content py-4 text-left px-6">
+                <!-- Modal Header -->
+                <div class="flex justify-between items-center pb-3">
+                    <p id="modal-title" class="text-xl font-bold text-gray-900"></p>
+                    <button id="modal-close" class="modal-close cursor-pointer z-50 text-gray-500 hover:text-gray-800">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <!-- Modal Body -->
+                <div id="modal-body" class="text-gray-600"></div>
+                <!-- Modal Footer -->
+                <div class="pt-4 flex justify-end">
+                    <button id="modal-ok" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 text-white py-8 mt-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
@@ -158,6 +202,33 @@
             menu.classList.toggle('hidden');
         });
 
+        // Modal functionality
+        const modalContainer = document.getElementById('modal-container');
+        const modalTitle = document.getElementById('modal-title');
+        const modalBody = document.getElementById('modal-body');
+        const modalClose = document.getElementById('modal-close');
+        const modalOk = document.getElementById('modal-ok');
+
+        function openModal(title, content) {
+            modalTitle.textContent = title;
+            modalBody.innerHTML = content;
+            modalContainer.classList.remove('hidden');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal() {
+            modalContainer.classList.add('hidden');
+            document.body.classList.remove('modal-active');
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalOk.addEventListener('click', closeModal);
+        modalContainer.addEventListener('click', function(e) {
+            if (e.target === modalContainer) {
+                closeModal();
+            }
+        });
+
         // Fetch and process data
         let allCompanies = [];
         let filteredCompanies = [];
@@ -170,6 +241,9 @@
                 }
                 allCompanies = await response.json();
                 filteredCompanies = [...allCompanies];
+                
+                // Log data to console for debugging
+                console.log("Data loaded:", allCompanies);
                 
                 // Populate cities dropdown
                 populateCityFilter();
@@ -195,9 +269,29 @@
         
         function populateCityFilter() {
             const cityFilter = document.getElementById('city-filter');
-            const cities = [...new Set(allCompanies.map(company => company.city))].sort();
             
-            cities.forEach(city => {
+            // Get all cities from all companies (including multiple locations)
+            let allCities = [];
+            allCompanies.forEach(company => {
+                if (company.locations) {
+                    company.locations.forEach(location => {
+                        allCities.push(location.city);
+                    });
+                }
+            });
+            
+            // Create a unique, sorted list of cities
+            const uniqueCities = [...new Set(allCities)].sort();
+            
+            // Major cities to prioritize
+            const majorCities = ["Karachi", "Lahore", "Islamabad", "Rawalpindi", "Faisalabad", "Peshawar", "Multan"];
+            
+            // Filter to only show cities we have data for
+            const citiesInData = majorCities.filter(city => uniqueCities.includes(city));
+            
+            // Add options to the dropdown
+            cityFilter.innerHTML = '<option value="">All Cities</option>';
+            citiesInData.forEach(city => {
                 const option = document.createElement('option');
                 option.value = city;
                 option.textContent = city;
@@ -224,36 +318,62 @@
                 const card = document.createElement('div');
                 card.className = 'company-card bg-white rounded-lg shadow-md overflow-hidden';
                 
-                const mapLink = company.mapLink ? 
-                    `<a href="${company.mapLink}" target="_blank" class="text-green-600 hover:text-green-800 inline-flex items-center">
-                        <i class="fas fa-map-marker-alt mr-1"></i> View on Map
-                    </a>` : 
-                    `<span class="text-gray-400 inline-flex items-center">
-                        <i class="fas fa-map-marker-alt mr-1"></i> Map not available
-                    </span>`;
+                // Build locations HTML
+                let locationsHTML = '';
+                if (company.locations && company.locations.length > 0) {
+                    locationsHTML = `
+                        <div class="mt-3">
+                            <p class="text-sm text-gray-500 mb-2">Locations:</p>
+                            <div class="flex flex-wrap gap-2">
+                    `;
+                    
+                    company.locations.forEach(location => {
+                        const hasMapLink = location.mapLink && location.mapLink.trim() !== '';
+                        const cityTag = hasMapLink 
+                            ? `<a href="${location.mapLink}" target="_blank" rel="noopener noreferrer" class="location-tag inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-500 text-white">
+                                <i class="fas fa-map-marker-alt mr-1"></i> ${location.city}
+                            </a>`
+                            : `<span class="location-tag inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-200 text-gray-800">
+                                <i class="fas fa-map-pin mr-1"></i> ${location.city}
+                            </span>`;
+                        
+                        locationsHTML += cityTag;
+                    });
+                    
+                    locationsHTML += '</div></div>';
+                }
+                
+                // Info button for description
+                const infoButton = company.description 
+                    ? `<button class="info-button text-blue-600 hover:text-blue-800 ml-2" data-company-name="${company.name}" data-company-description="${company.description.replace(/"/g, '&quot;')}">
+                        <i class="fas fa-info-circle"></i>
+                      </button>` 
+                    : '';
                 
                 card.innerHTML = `
                     <div class="p-6">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-2">${company.name}</h3>
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">${company.name}</h3>
+                            ${infoButton}
+                        </div>
                         <div class="text-sm text-gray-600 space-y-2">
                             <p class="flex items-start">
                                 <i class="fas fa-envelope w-5 text-gray-400 mt-1"></i>
                                 <span class="ml-2">${company.email}</span>
                             </p>
-                            <p class="flex items-start">
-                                <i class="fas fa-map-pin w-5 text-gray-400 mt-1"></i>
-                                <span class="ml-2">${company.city}</span>
-                            </p>
-                            <p class="flex items-start">
-                                <i class="fas fa-location-arrow w-5 text-gray-400 mt-1"></i>
-                                <span class="ml-2">${company.location}</span>
-                            </p>
                         </div>
-                        <div class="mt-4">
-                            ${mapLink}
-                        </div>
+                        ${locationsHTML}
                     </div>
                 `;
+                
+                // Add event listener for info button if description exists
+                if (company.description) {
+                    card.querySelector('.info-button').addEventListener('click', function() {
+                        const companyName = this.getAttribute('data-company-name');
+                        const companyDescription = this.getAttribute('data-company-description');
+                        openModal(companyName, `<p class="text-gray-700">${companyDescription}</p>`);
+                    });
+                }
                 
                 container.appendChild(card);
             });
@@ -273,15 +393,26 @@
             const searchTerm = document.getElementById('search-input').value.toLowerCase();
             const selectedCity = document.getElementById('city-filter').value;
             
+            console.log("Filtering - Search Term:", searchTerm, "Selected City:", selectedCity);
+            
             filteredCompanies = allCompanies.filter(company => {
+                // Check if company name or email matches search term
                 const matchesSearch = 
                     company.name.toLowerCase().includes(searchTerm) || 
                     company.email.toLowerCase().includes(searchTerm);
                 
-                const matchesCity = !selectedCity || company.city === selectedCity;
+                // Check if any location matches selected city
+                let matchesCity = true;
+                if (selectedCity) {
+                    matchesCity = company.locations && company.locations.some(location => 
+                        location.city === selectedCity
+                    );
+                }
                 
                 return matchesSearch && matchesCity;
             });
+            
+            console.log("Filtered results:", filteredCompanies.length);
             
             displayCompanies(filteredCompanies);
             updateResultsCount();

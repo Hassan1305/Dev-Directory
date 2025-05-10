@@ -2,211 +2,156 @@
   {
     "name": "Systems Limited",
     "email": "info@systemsltd.com",
-    "city": "Lahore",
-    "location": "E-1, Sehjpal Road, Gulberg III",
-    "mapLink": "https://maps.app.goo.gl/srD49CTFaBSxdC1E8"
+    "description": "Systems Limited is one of Pakistan's oldest software houses, established in 1977. They specialize in enterprise digital transformation solutions, business process outsourcing, and technology consulting services. Systems Limited is listed on the Pakistan Stock Exchange and has multiple international certifications including CMMI Level 5.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "E-1, Sehjpal Road, Gulberg III",
+        "mapLink": "https://www.google.com/maps/place/Systems+Limited/@31.5128336,74.3378856,17z/data=!3m1!4b1!4m6!3m5!1s0x39190483e58107d9:0xc23abe6ccc7e2462!8m2!3d31.5128336!4d74.3404605!16s%2Fg%2F11b6q_rd2n"
+      },
+      {
+        "city": "Karachi",
+        "address": "Plot No. 5, Sector 24, Korangi Industrial Area",
+        "mapLink": "https://www.google.com/maps/place/Systems+Ltd./@24.8423405,67.1153889,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb33a5b4573e913:0xe66fe39eaf319e7!8m2!3d24.8423405!4d67.1179638!16s%2Fg%2F11g_7dc2r_"
+      },
+      {
+        "city": "Islamabad",
+        "address": "Evacuee Trust Complex, F-5/1",
+        "mapLink": "https://www.google.com/maps/place/Systems+Limited/@33.7297016,73.0836138,17z/data=!3m1!4b1!4m6!3m5!1s0x38dfbe0196cda553:0x27da96d5d799f977!8m2!3d33.7297016!4d73.0861887!16s%2Fg%2F11b6q_rc8k"
+      }
+    ]
   },
   {
     "name": "10Pearls",
     "email": "info@10pearls.com",
-    "city": "Karachi",
-    "location": "17th Floor, The Harbor Front Building",
-    "mapLink": "https://maps.app.goo.gl/yCijSjA5LuPKQk7H7"
+    "description": "10Pearls is a software development company that specializes in digital transformation, product development, and user experience design. Founded in 2004, they work with startups, mid-sized businesses, and Fortune 500 companies to create innovative digital solutions. They have a strong focus on emerging technologies like AI, machine learning, and blockchain.",
+    "locations": [
+      {
+        "city": "Karachi",
+        "address": "17th Floor, The Harbor Front Building",
+        "mapLink": "https://www.google.com/maps/place/10Pearls/@24.8296104,67.0292763,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb33df099f3a6f1:0xb65647fb0114e173!8m2!3d24.8296104!4d67.0318512!16s%2Fg%2F11b6q_rd9p"
+      },
+      {
+        "city": "Islamabad",
+        "address": "Plot 19A, G-10 Markaz",
+        "mapLink": "https://www.google.com/maps/place/10Pearls/@33.6841993,73.0114983,17z/data=!3m1!4b1!4m6!3m5!1s0x38df95346a72cc37:0xd1c4ea37dd0c097!8m2!3d33.6841993!4d73.0140732!16s%2Fg%2F11h17gf4ft"
+      }
+    ]
   },
   {
     "name": "Arbisoft",
     "email": "contact@arbisoft.com",
-    "city": "Lahore",
-    "location": "24-N Gulberg II",
-    "mapLink": "https://maps.app.goo.gl/DtnRcX5jcwXbqcWs8"
+    "description": "Arbisoft is a software services company specializing in web and mobile applications, AI solutions, and data analytics. Founded in 2007, they have grown to over 400 engineers working with clients around the world, including edX, Kayak, and Coca-Cola. They have a strong engineering culture and are known for their quality and reliability.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "24-N Gulberg II",
+        "mapLink": "https://www.google.com/maps/place/Arbisoft/@31.5068183,74.3380825,17z/data=!3m1!4b1!4m6!3m5!1s0x391904f9e6e2b9fd:0xc1eda196da838592!8m2!3d31.5068183!4d74.3406574!16s%2Fg%2F11g6wm7pdl"
+      }
+    ]
   },
   {
     "name": "NetSol Technologies",
     "email": "info@netsoltech.com",
-    "city": "Lahore",
-    "location": "NetSol IT Village, Lahore Ring Road",
-    "mapLink": "https://maps.app.goo.gl/NxMHHwNW9J1weLfj8"
-  },
-  {
-    "name": "Folio3",
-    "email": "info@folio3.com",
-    "city": "Karachi",
-    "location": "3rd Floor, Bahria Complex II, MT Khan Road",
-    "mapLink": "https://maps.app.goo.gl/hGTrbAWcdYrRWP9j6"
-  },
-  {
-    "name": "TPS",
-    "email": "info@tpsonline.com",
-    "city": "Karachi",
-    "location": "TPS Tower, Shahra-e-Faisal",
-    "mapLink": "https://maps.app.goo.gl/yLXH6pL8sgBbAgwK9"
-  },
-  {
-    "name": "Securiti.ai",
-    "email": "contact@securiti.ai",
-    "city": "Lahore",
-    "location": "Gulberg III",
-    "mapLink": "https://maps.app.goo.gl/75e2pUYfWBDmhF2j8"
-  },
-  {
-    "name": "Afiniti",
-    "email": "info@afiniti.com",
-    "city": "Lahore",
-    "location": "Emporium Mall, Abdul Haque Road",
-    "mapLink": "https://maps.app.goo.gl/R7Lbq5eQHvVxn8eR7"
+    "description": "NetSol Technologies is a global IT and enterprise software solution provider. Founded in 1997, they primarily serve the global asset finance and leasing industry with their flagship product, NFS Ascent. NetSol is publicly listed on NASDAQ and has a large campus in Lahore. They are one of the largest software exporters in Pakistan.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "NetSol IT Village, Lahore Ring Road",
+        "mapLink": "https://www.google.com/maps/place/NetSol+Technologies/@31.4722671,74.2701053,17z/data=!3m1!4b1!4m6!3m5!1s0x3919035676976f11:0x4c9f1bc57ea09f3e!8m2!3d31.4722671!4d74.2726802!16s%2Fg%2F1ptzh7q38"
+      }
+    ]
   },
   {
     "name": "Gaditek",
     "email": "careers@gaditek.com",
-    "city": "Karachi",
-    "location": "Gaditek House, 15th Floor, Sky Tower",
-    "mapLink": "https://maps.app.goo.gl/vgTvKCGtKiBLmT8u5"
-  },
-  {
-    "name": "DevNation",
-    "email": "hello@devnation.com",
-    "city": "Karachi",
-    "location": "Z Square, DHA Phase 8",
-    "mapLink": "https://maps.app.goo.gl/PEKcBXTbJy4WMkUE8"
-  },
-  {
-    "name": "Techlogix",
-    "email": "info@techlogix.com",
-    "city": "Lahore",
-    "location": "300 Y Block, DHA Phase 3",
-    "mapLink": "https://maps.app.goo.gl/nQZFfqZ9zmvyTqKW6"
-  },
-  {
-    "name": "Contour Software",
-    "email": "info@contour-software.com",
-    "city": "Lahore",
-    "location": "Tufail Road, Lahore Cantt",
-    "mapLink": "https://maps.app.goo.gl/f32GJeGwpB6w1pu89"
-  },
-  {
-    "name": "Xavor Corporation",
-    "email": "info@xavor.com",
-    "city": "Lahore",
-    "location": "90 Tipu Block, New Garden Town",
-    "mapLink": "https://maps.app.goo.gl/kzKYVykgwVvLpKLb9"
-  },
-  {
-    "name": "Emerald Labs",
-    "email": "contact@emeraldlabs.com",
-    "city": "Islamabad",
-    "location": "Plot 27, Sector F-10/1",
-    "mapLink": "https://maps.app.goo.gl/RxkZEq5gX5tNWyW86"
-  },
-  {
-    "name": "Excellence Delivered (ExD)",
-    "email": "info@exdpk.com",
-    "city": "Islamabad",
-    "location": "Plot 43, St 5, G 10/3",
-    "mapLink": "https://maps.app.goo.gl/ZRZw1GnvbPR6yUWB9"
-  },
-  {
-    "name": "Conovo Technologies",
-    "email": "info@conovo.com",
-    "city": "Islamabad",
-    "location": "Plot 152, Industrial Triangle, Kahuta Road",
-    "mapLink": "https://maps.app.goo.gl/6UtUgNKMbFCcfDSa9"
-  },
-  {
-    "name": "Codebase Technologies",
-    "email": "info@codebtech.com",
-    "city": "Karachi",
-    "location": "14th Floor, Bahria Complex II",
-    "mapLink": "https://maps.app.goo.gl/d8aN7e47PFi2fPJn9"
-  },
-  {
-    "name": "Mindstorm Studios",
-    "email": "info@mindstormstudios.com",
-    "city": "Lahore",
-    "location": "11-T Gulberg II",
-    "mapLink": "https://maps.app.goo.gl/JoZRRRCWCJAC5bwd8"
-  },
-  {
-    "name": "i2c Inc.",
-    "email": "info@i2cinc.com",
-    "city": "Lahore",
-    "location": "Tufail Road, Lahore Cantt",
-    "mapLink": "https://maps.app.goo.gl/M8v5BPgCskMgj5a47"
-  },
-  {
-    "name": "Red Buffer",
-    "email": "info@redbuffer.net",
-    "city": "Lahore",
-    "location": "Canal Bank, Johar Town",
-    "mapLink": "https://maps.app.goo.gl/M6YpPMVaEWscuXqW7"
-  },
-  {
-    "name": "Teradata",
-    "email": "info.pakistan@teradata.com",
-    "city": "Islamabad",
-    "location": "Plot 17, Sector I-9/3",
-    "mapLink": "https://maps.app.goo.gl/yyHhHn6EDdj23hQP9"
-  },
-  {
-    "name": "Tkxel",
-    "email": "info@tkxel.com",
-    "city": "Islamabad",
-    "location": "Plot 27, Sector F-10/1",
-    "mapLink": "https://maps.app.goo.gl/jWLMg1EVmVZtrGXR9"
-  },
-  {
-    "name": "Nextbridge",
-    "email": "contact@nextbridge.com",
-    "city": "Lahore",
-    "location": "Barkat Market, New Garden Town",
-    "mapLink": "https://maps.app.goo.gl/Hp5RzfQo5pMJR7sN7"
-  },
-  {
-    "name": "Coeus Solutions",
-    "email": "info@coeus-solutions.de",
-    "city": "Islamabad",
-    "location": "Plot 119, Street 2, I-10/3",
-    "mapLink": "https://maps.app.goo.gl/Vx9rg8sR9WrzL6YE7"
+    "description": "Gaditek is a technology company that builds and scales internet products. Founded in 2010, they operate in various sectors including cybersecurity, VPNs, and lead generation. Their flagship products include PureVPN, a leading VPN service. They have a strong focus on innovation and product development.",
+    "locations": [
+      {
+        "city": "Karachi",
+        "address": "Gaditek House, 15th Floor, Sky Tower",
+        "mapLink": "https://www.google.com/maps/place/Gaditek/@24.8296104,67.0318512,17z/data=!4m14!1m7!3m6!1s0x3eb33df099f3a6f1:0xb65647fb0114e173!2s10Pearls!8m2!3d24.8296104!4d67.0318512!16s%2Fg%2F11b6q_rd9p!3m5!1s0x3eb33e3aa1a3cddd:0xf1e01484c5af0b16!8m2!3d24.8260517!4d67.0313192!16s%2Fg%2F11b775bs5l"
+      }
+    ]
   },
   {
     "name": "VentureDive",
     "email": "info@venturedive.com",
-    "city": "Karachi",
-    "location": "26th Floor, Sky Tower, Clifton",
-    "mapLink": "https://maps.app.goo.gl/cB5o6Vos1xEYBsKZ9"
+    "description": "VentureDive is a technology solutions company specializing in digital product development and data solutions. Founded in 2012, they work with startups and enterprises across various industries. They were the development partner for Careem (now acquired by Uber) and have worked with major clients like Coca-Cola and the World Bank.",
+    "locations": [
+      {
+        "city": "Karachi",
+        "address": "26th Floor, Sky Tower, Clifton",
+        "mapLink": "https://www.google.com/maps/place/VentureDive/@24.8259844,67.0287433,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb33e3a47ea33d1:0x7f75a9cd46c16283!8m2!3d24.8259844!4d67.0313182!16s%2Fg%2F11c1ntmvcj"
+      },
+      {
+        "city": "Lahore",
+        "address": "10th Floor, Pace Tower, M.M. Alam Road",
+        "mapLink": "https://www.google.com/maps/place/VentureDive/@31.5172041,74.3544021,17z/data=!3m1!4b1!4m6!3m5!1s0x391904fe543a8227:0xac3ab2fbbc3c587!8m2!3d31.5172041!4d74.356977!16s%2Fg%2F11hyb2n77g"
+      }
+    ]
   },
   {
-    "name": "Cloudtek",
-    "email": "info@cloudtek.io",
-    "city": "Karachi",
-    "location": "15th Floor, Bahria Complex II",
-    "mapLink": "https://maps.app.goo.gl/7H8x3vWN2EUWbzXG8"
+    "name": "Zameen.com",
+    "email": "info@zameen.com",
+    "description": "Zameen.com is Pakistan's largest real estate portal and one of the country's most successful tech startups. Founded in 2006, the company has grown into a major tech employer with a strong engineering team. They are part of the EMPG Group, which operates property portals across emerging markets.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "Arfa Software Technology Park",
+        "mapLink": "https://www.google.com/maps/place/Zameen.com/@31.4736014,74.3419147,17z/data=!3m1!4b1!4m6!3m5!1s0x391904bddd42a861:0xcfcf866d2c6f29d4!8m2!3d31.4736014!4d74.3444896!16s%2Fg%2F11bc6jvpsy"
+      },
+      {
+        "city": "Islamabad",
+        "address": "Evacuee Trust Complex, F-5/1",
+        "mapLink": ""
+      },
+      {
+        "city": "Karachi",
+        "address": "Shahrah-e-Faisal, Main Boulevard",
+        "mapLink": "https://www.google.com/maps/place/Zameen.com+-+Karachi+Office/@24.8571321,67.0595933,17z/data=!3m1!4b1!4m6!3m5!1s0x3eb33ecc5f06fa89:0xbadf54840295bfba!8m2!3d24.8571321!4d67.0621682!16s%2Fg%2F11j4j5lzfd"
+      }
+    ]
   },
   {
-    "name": "IBEX",
-    "email": "careers.pk@ibex.co",
-    "city": "Lahore",
-    "location": "Thokar Niaz Baig",
-    "mapLink": "https://maps.app.goo.gl/HLHMqCd9WYNkkVnj8"
+    "name": "Educative Inc",
+    "email": "hello@educative.io",
+    "description": "Educative is an interactive online learning platform for software developers. Founded in 2015 by Pakistani entrepreneurs, they have built a platform that allows authors to create and publish interactive courses. The company is headquartered in Seattle but maintains a significant engineering presence in Pakistan.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "Gulberg III",
+        "mapLink": "https://www.google.com/maps/place/Educative/@31.5144096,74.3410151,17z/data=!3m1!4b1!4m6!3m5!1s0x391905aea6beaa71:0xd88ec1ffff9f9c9c!8m2!3d31.5144097!4d74.34359!16s%2Fg%2F11hbfq2fy1"
+      }
+    ]
   },
   {
-    "name": "NetSol Connect",
-    "email": "info@netsolconnect.com",
-    "city": "Lahore",
-    "location": "NetSol Avenue, Ghazi Road",
-    "mapLink": "https://maps.app.goo.gl/KDTAWwHx2dS1Vwnh9"
+    "name": "Confiz",
+    "email": "info@confiz.com",
+    "description": "Confiz is a technology services company specializing in retail, e-commerce, and enterprise solutions. Founded in 2005, they work with major global retailers and have expertise in Microsoft technologies, cloud solutions, and data analytics. They have a strong focus on quality and process excellence.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "Evacuee Trust Complex",
+        "mapLink": "https://www.google.com/maps/place/Confiz+Limited/@31.5207546,74.3350474,17z/data=!3m1!4b1!4m6!3m5!1s0x39190452c953a377:0xd1fc0930da0cc118!8m2!3d31.5207546!4d74.3376223!16s%2Fg%2F1v3vgl6w"
+      },
+      {
+        "city": "Islamabad",
+        "address": "BlueTech Tower, F-8 Markaz",
+        "mapLink": ""
+      }
+    ]
   },
   {
-    "name": "DPL",
-    "email": "info@dpl.com.pk",
-    "city": "Karachi",
-    "location": "20-C, PECHS",
-    "mapLink": "https://maps.app.goo.gl/c7dg6cMtFXQjehGT9"
-  },
-  {
-    "name": "Mentor Graphics",
-    "email": "info.pk@mentor.com",
-    "city": "Lahore",
-    "location": "Tufail Road, Lahore Cantt",
-    "mapLink": "https://maps.app.goo.gl/v1GkLEpYZcEA6Vqi6"
+    "name": "TechAbout",
+    "email": "connect@techabout.com",
+    "description": "TechAbout is a software development company focused on web and mobile app development, UI/UX design, and digital marketing. They work with startups and established businesses globally, helping them build and scale their digital presence. The company has expertise in modern technologies like React, Node.js, and Flutter.",
+    "locations": [
+      {
+        "city": "Lahore",
+        "address": "Valencia Town",
+        "mapLink": "https://www.google.com/maps/place/TechAbout+Pakistan/@31.3767095,74.2090213,17z/data=!3m1!4b1!4m6!3m5!1s0x3918ffd0a9927a85:0xf26d68d2a9c93ea1!8m2!3d31.3767095!4d74.2115962!16s%2Fg%2F11nnsd0vhc"
+      }
+    ]
   }
 ]
