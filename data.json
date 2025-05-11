@@ -120,26 +120,31 @@
   },
   {
     "name": "1Click",
-    "email": "hr@1click.com.pk",
+    "email": "info@1click.com.pk",
     "website": "https://1click.com.pk/",
     "description": "1Click is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
     "locations": [
       {
         "city": "Karachi",
-        "address": "Headquarters",
-        "mapLink": ""
+        "address": "Shahrah-e-Faisal Office # 1602 16th Floor",
+        "mapLink": "https://maps.app.goo.gl/STSd5744KrD7VMpK7"
       }
     ],
-    "businessType": null,
+    "businessType": "Service-based",
     "techStack": [],
-    "services": [],
+    "services": [
+      "Digital Marketing",
+      "SEO",
+      "Content Writing",
+      "Web Development"
+    ],
     "products": [],
-    "hiringStatus": null,
+    "hiringStatus": "Occasionally Hiring",
     "socialLinks": {
-      "linkedin": null,
+      "linkedin": "https://www.linkedin.com/company/oneclickpakistan",
       "github": null,
       "instagram": null,
-      "facebook": null,
+      "facebook": "https://www.facebook.com/1click.com.pk",
       "careers": null
     },
     "last_updated": "2025-05-11"
