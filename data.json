@@ -186,27 +186,27 @@
     "name": "1Link",
     "email": "careers@1link.net.pk",
     "website": "https://1link.net.pk/",
-    "description": "1Link is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
+    "description": "1LINK is Pakistan’s first fully licensed PSO/PSP, largest payment and switch system, committed to administer and evolve a strong e-payment network in the country. Complying with the PCI DSS (Payment Card Industry Data Security Standard), 1LINK steers the connections among its member banks and stakeholders under the highest security standards. Being Pakistan’s leading financial enabler, 1LINK has bagged many ‘firsts’ to its profile. 1LINK pioneered the development and operations of the Inter Bank Network which provides interoperability through shared ATM network, real-time interbank funds transfers and connectivity to Global Payment Schemes such as Visa, MasterCard, UnionPay and JCB. As part of its dedication to building and sustaining consistent payment networks, 1LINK is the catalyzing force behind the development of e-payments in the country, and is focused on adding new products and services to its portfolio to further enhance Pakistan’s financial industry. 1LINK undergoes PCI DSS certification review annually and for PIN security every two years. Additionally, being an SBP regulatee, BID (Banking Inspection Department) SBP periodically conducts inspection under their by-laws covering all aspects of operations, information security, compliance and infrastructure. 1LINK is owned by consortium of 11 banks. It was incorporated with Securities and Exchange Commission of Pakistan (SECP) as a Guarantee Limited Company on September 20, 2004 and with State Bank of Pakistan (SBP)’s approval on September 30, 2015, 1LINK became Pakistan’s first fully licensed PSO/PSP. 1LINK was converted to Private Limited Company under section 49 of Companies Act 2017 on July 5, 2018.",
     "locations": [
       {
         "city": "Karachi",
-        "address": "Headquarters",
-        "mapLink": ""
+        "address": "1LINK 1HQ LG 11 / 11-A, Lower floor Park Towers , Clifton Block",
+        "mapLink": "https://maps.app.goo.gl/Z5L73wegt14sPyFq9"
       }
     ],
-    "businessType": null,
+    "businessType": "Product Based",
     "techStack": [],
     "services": [],
-    "products": [],
-    "hiringStatus": null,
+    "products": ["Payment System"],
+    "hiringStatus": "Occasionally Hiring",
     "socialLinks": {
-      "linkedin": null,
+      "linkedin": "https://www.linkedin.com/company/1linkpvtltd/",
       "github": null,
       "instagram": null,
       "facebook": null,
-      "careers": null
+      "careers": "https://1link.net.pk/careers"
     },
-    "last_updated": "2025-05-11"
+    "last_updated": "2025-05-12"
   },
   {
     "name": "24hours",
