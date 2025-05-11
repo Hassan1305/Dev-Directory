@@ -39,6 +39,39 @@
     "last_updated": "2025-05-12"
   },
   {
+    "name": "100 Tech Solutions",
+    "email": "info@100techsolutions.com",
+    "website": "https://100techsolutions.com/",
+    "description": "100 Tech Solution is software development organization primarily working from Pakistan that endeavour on cost effective, professional, timely-delivered software development services, we understand that a technology is incomplete consonance with the client’s competitive strategies.",
+    "locations": [
+      {
+        "city": "Karachi",
+        "address": "ORIC Department 2nd Floor EDC Tower Iqra University",
+        "mapLink": ""
+      }
+    ],
+    "businessType": "Service-based",
+    "techStack": [],
+    "services": [
+      "Desktop Applications",
+      "Web Development",
+      "Mobile App Development",
+      "Domain & Hosting",
+      "Digital Marketing",
+      "E-Commerce"
+    ],
+    "products": [],
+    "hiringStatus": "Occasionally Hiring",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/company/100tech-solutions/",
+      "github": null,
+      "instagram": "https://www.instagram.com/100techsolutions/",
+      "facebook": "https://www.facebook.com/100techsolutions/",
+      "careers": null
+    },
+    "last_updated": "2025-05-12"
+  },
+  {
     "name": "1000solutions",
     "email": "",
     "website": "",
