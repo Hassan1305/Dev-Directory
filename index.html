@@ -47,21 +47,39 @@
         color: #111827;
       }
 
-      #city-filter {
+      #city-filter,
+      #items-per-page {
         color: #111827; /* Dark text color for better visibility */
         background-color: #ffffff; /* White background */
       }
 
-      #city-filter option {
+      #city-filter option,
+      #items-per-page option {
         color: #111827; /* Ensure dropdown options are visible */
         background-color: #ffffff; /* White background for options */
       }
 
       /* Fix for dropdown focus states */
-      #city-filter:focus {
+      #city-filter:focus,
+      #items-per-page:focus {
         border-color: #10b981; /* Green border when focused (matches the site theme) */
         box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2); /* Subtle green glow */
         outline: none;
+      }
+
+      /* Load more button pulse animation */
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      .pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
       }
     </style>
   </head>
@@ -170,7 +188,7 @@
                 placeholder="Search by company name or email..."
               />
             </div>
-            <div class="md:w-1/4">
+            <div class="md:w-1/5">
               <select
                 id="city-filter"
                 class="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
@@ -179,11 +197,29 @@
                 <!-- Cities will be populated from data.json -->
               </select>
             </div>
+            <div class="md:w-1/5">
+              <select
+                id="items-per-page"
+                class="block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm rounded-md"
+              >
+                <option value="10">10 per page</option>
+                <option value="15" selected>15 per page</option>
+                <option value="25">25 per page</option>
+                <option value="50">50 per page</option>
+                <option value="100">100 per page</option>
+              </select>
+            </div>
           </div>
-          <div class="mt-2 text-right">
-            <span id="results-count" class="text-sm text-gray-600"
-              >Showing all companies</span
-            >
+          <div class="mt-2 flex justify-between items-center">
+            <div class="text-sm text-gray-500">
+              <label for="items-per-page" class="font-medium">Display: </label>
+              <span id="display-info" class="text-xs"
+                >15 companies per page</span
+              >
+            </div>
+            <span id="results-count" class="text-sm text-gray-600">
+              Showing all companies
+            </span>
           </div>
         </div>
       </div>
@@ -203,6 +239,16 @@
         class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         <!-- Companies will be populated here from data.json -->
+      </div>
+
+      <!-- Load More Button -->
+      <div id="load-more-container" class="hidden text-center py-8">
+        <button
+          id="load-more-btn"
+          class="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all shadow-md hover:shadow-lg"
+        >
+          Load More <i class="fas fa-chevron-down ml-2"></i>
+        </button>
       </div>
 
       <div id="no-results" class="hidden text-center py-10">
@@ -296,6 +342,15 @@
     </footer>
 
     <script>
+      // Pagination variables
+      let currentPage = 1;
+      let itemsPerPage = 15; // Default value
+      let isLoading = false;
+
+      // Core data variables
+      let allCompanies = [];
+      let filteredCompanies = [];
+
       // Mobile menu toggle
       document
         .getElementById("mobile-menu-button")
@@ -310,6 +365,68 @@
       const modalBody = document.getElementById("modal-body");
       const modalClose = document.getElementById("modal-close");
       const modalOk = document.getElementById("modal-ok");
+
+      // Function to handle changing items per page
+      function changeItemsPerPage() {
+        // Get the selected value
+        const newItemsPerPage = parseInt(
+          document.getElementById("items-per-page").value
+        );
+
+        // If it hasn't changed, do nothing
+        if (newItemsPerPage === itemsPerPage) return;
+
+        // Update the items per page
+        itemsPerPage = newItemsPerPage;
+
+        // Update the display info
+        document.getElementById(
+          "display-info"
+        ).textContent = `${itemsPerPage} companies per page`;
+
+        // Reset to page 1 and redisplay
+        currentPage = 1;
+        displayCompanies(filteredCompanies);
+        updateResultsCount();
+
+        // Show load more button if needed
+        const loadMoreContainer = document.getElementById(
+          "load-more-container"
+        );
+        if (filteredCompanies.length > itemsPerPage) {
+          loadMoreContainer.classList.remove("hidden");
+        } else {
+          loadMoreContainer.classList.add("hidden");
+        }
+
+        // Save preference to localStorage
+        localStorage.setItem("devdir-itemsPerPage", itemsPerPage);
+      }
+
+      // Function to load saved preferences
+      function loadSavedPreferences() {
+        // Load items per page preference
+        const savedItemsPerPage = localStorage.getItem("devdir-itemsPerPage");
+        if (savedItemsPerPage) {
+          itemsPerPage = parseInt(savedItemsPerPage);
+
+          // Set the dropdown to match
+          const itemsPerPageSelect = document.getElementById("items-per-page");
+          for (let i = 0; i < itemsPerPageSelect.options.length; i++) {
+            if (
+              parseInt(itemsPerPageSelect.options[i].value) === itemsPerPage
+            ) {
+              itemsPerPageSelect.selectedIndex = i;
+              break;
+            }
+          }
+
+          // Update display info
+          document.getElementById(
+            "display-info"
+          ).textContent = `${itemsPerPage} companies per page`;
+        }
+      }
 
       function openModal(companyName, companyData) {
         // Set the modal title
@@ -370,7 +487,6 @@
       <p class="text-gray-700">${company.description}</p>
     </div>
   `;
-
         // Add website if available
         if (company.website) {
           modalContent += `
@@ -650,104 +766,47 @@
         }
       });
 
-      // Fetch and process data
-      let allCompanies = [];
-      let filteredCompanies = [];
-
-      async function fetchData() {
-        try {
-          const response = await fetch("data.json");
-          if (!response.ok) {
-            throw new Error("Failed to fetch data");
-          }
-          allCompanies = await response.json();
-          filteredCompanies = [...allCompanies];
-
-          // Log data to console for debugging
-          console.log("Data loaded:", allCompanies);
-
-          // Populate cities dropdown
-          populateCityFilter();
-
-          // Display companies
-          displayCompanies(allCompanies);
-
-          // Hide loading, show companies
-          document.getElementById("loading").classList.add("hidden");
-          document
-            .getElementById("companies-container")
-            .classList.remove("hidden");
-          updateResultsCount();
-        } catch (error) {
-          console.error("Error:", error);
-          document.getElementById("loading").innerHTML = `
-                    <div class="text-red-500">
-                        <i class="fas fa-exclamation-circle fa-3x"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-700 mt-4">Failed to load data</h3>
-                    <p class="text-gray-500 mt-2">Please try again later or check the data.json file.</p>
-                `;
-        }
-      }
-
-      function populateCityFilter() {
-        const cityFilter = document.getElementById("city-filter");
-
-        // Get all cities from all companies (including multiple locations)
-        let allCities = [];
-        allCompanies.forEach((company) => {
-          if (company.locations) {
-            company.locations.forEach((location) => {
-              allCities.push(location.city);
-            });
-          }
-        });
-
-        // Create a unique, sorted list of cities
-        const uniqueCities = [...new Set(allCities)].sort();
-
-        // Major cities to prioritize
-        const majorCities = [
-          "Karachi",
-          "Lahore",
-          "Islamabad",
-          "Rawalpindi",
-          "Faisalabad",
-          "Peshawar",
-          "Multan",
-        ];
-
-        // Filter to only show cities we have data for
-        const citiesInData = majorCities.filter((city) =>
-          uniqueCities.includes(city)
-        );
-
-        // Add options to the dropdown
-        cityFilter.innerHTML = '<option value="">All Cities</option>';
-        citiesInData.forEach((city) => {
-          const option = document.createElement("option");
-          option.value = city;
-          option.textContent = city;
-          cityFilter.appendChild(option);
-        });
-      }
-
-      function displayCompanies(companies) {
+      // Modified displayCompanies function to handle pagination
+      function displayCompanies(companies, append = false) {
         const container = document.getElementById("companies-container");
         const noResults = document.getElementById("no-results");
+        const loadMoreContainer = document.getElementById(
+          "load-more-container"
+        );
 
-        container.innerHTML = "";
+        // If no append, clear the container
+        if (!append) {
+          container.innerHTML = "";
+        }
 
-        if (companies.length === 0) {
+        if (companies.length === 0 && !append) {
           container.classList.add("hidden");
           noResults.classList.remove("hidden");
+          if (loadMoreContainer) loadMoreContainer.classList.add("hidden");
           return;
         }
 
         container.classList.remove("hidden");
         noResults.classList.add("hidden");
 
-        companies.forEach((company) => {
+        // Calculate pagination indexes
+        const startIndex = append ? (currentPage - 1) * itemsPerPage : 0;
+        const endIndex = append ? startIndex + itemsPerPage : itemsPerPage;
+
+        // Get the companies to display for this page
+        const companiesToDisplay = companies.slice(startIndex, endIndex);
+
+        // Check if we need to show the load more button
+        const hasMore = endIndex < companies.length;
+        if (loadMoreContainer) {
+          if (hasMore) {
+            loadMoreContainer.classList.remove("hidden");
+          } else {
+            loadMoreContainer.classList.add("hidden");
+          }
+        }
+
+        companiesToDisplay.forEach((company) => {
           const card = document.createElement("div");
           card.className =
             "company-card bg-white rounded-lg shadow-md overflow-hidden";
@@ -1028,28 +1087,53 @@
         });
       }
 
+      // Function to load more companies
+      function loadMoreCompanies() {
+        if (isLoading) return;
+
+        isLoading = true;
+        document.getElementById("load-more-btn").innerHTML =
+          '<i class="fas fa-spinner fa-spin mr-2"></i> Loading...';
+
+        // Simulate a small delay to show loading state
+        setTimeout(() => {
+          currentPage++;
+          displayCompanies(filteredCompanies, true);
+          updateResultsCount();
+          isLoading = false;
+          document.getElementById("load-more-btn").innerHTML =
+            'Load More <i class="fas fa-chevron-down ml-2"></i>';
+        }, 300);
+      }
+
+      // Update results count with pagination info
       function updateResultsCount() {
         const count = document.getElementById("results-count");
+        const currentlyShowing = Math.min(
+          currentPage * itemsPerPage,
+          filteredCompanies.length
+        );
+
         if (filteredCompanies.length === allCompanies.length) {
-          count.textContent = `Showing all ${allCompanies.length} companies`;
+          count.textContent = `Showing ${currentlyShowing} of ${allCompanies.length} companies`;
         } else {
-          count.textContent = `Showing ${filteredCompanies.length} of ${allCompanies.length} companies`;
+          count.textContent = `Showing ${currentlyShowing} of ${filteredCompanies.length} filtered companies (from ${allCompanies.length} total)`;
         }
       }
 
-      // Filter companies based on search input and city selection
+      // Modify filterCompanies function to handle pagination
       function filterCompanies() {
         const searchTerm = document
           .getElementById("search-input")
           .value.toLowerCase();
         const selectedCity = document.getElementById("city-filter").value;
 
-        console.log(
-          "Filtering - Search Term:",
-          searchTerm,
-          "Selected City:",
-          selectedCity
-        );
+        // console.log(
+        //   "Filtering - Search Term:",
+        //   searchTerm,
+        //   "Selected City:",
+        //   selectedCity
+        // );
 
         filteredCompanies = allCompanies.filter((company) => {
           // Check if company name or email matches search term
@@ -1070,10 +1154,110 @@
           return matchesSearch && matchesCity;
         });
 
-        console.log("Filtered results:", filteredCompanies.length);
+        // console.log("Filtered results:", filteredCompanies.length);
 
+        // Reset pagination when filter changes
+        currentPage = 1;
+
+        // Display the first page
         displayCompanies(filteredCompanies);
         updateResultsCount();
+      }
+
+      function populateCityFilter() {
+        const cityFilter = document.getElementById("city-filter");
+
+        // Get all cities from all companies (including multiple locations)
+        let allCities = [];
+        allCompanies.forEach((company) => {
+          if (company.locations) {
+            company.locations.forEach((location) => {
+              allCities.push(location.city);
+            });
+          }
+        });
+
+        // Create a unique, sorted list of cities
+        const uniqueCities = [...new Set(allCities)].sort();
+
+        // Major cities to prioritize
+        const majorCities = [
+          "Karachi",
+          "Lahore",
+          "Islamabad",
+          "Rawalpindi",
+          "Faisalabad",
+          "Peshawar",
+          "Multan",
+        ];
+
+        // Filter to only show cities we have data for
+        const citiesInData = majorCities.filter((city) =>
+          uniqueCities.includes(city)
+        );
+
+        // Add options to the dropdown
+        cityFilter.innerHTML = '<option value="">All Cities</option>';
+        citiesInData.forEach((city) => {
+          const option = document.createElement("option");
+          option.value = city;
+          option.textContent = city;
+          cityFilter.appendChild(option);
+        });
+      }
+
+      // Fetch and process data with pagination
+      async function fetchData() {
+        try {
+          // Load saved preferences first
+          loadSavedPreferences();
+
+          const response = await fetch("data.json");
+          if (!response.ok) {
+            throw new Error("Failed to fetch data");
+          }
+          allCompanies = await response.json();
+          filteredCompanies = [...allCompanies];
+
+          // Log data to console for debugging
+          // console.log("Data loaded:", allCompanies.length, "companies");
+
+          // Populate cities dropdown
+          populateCityFilter();
+
+          // Reset pagination
+          currentPage = 1;
+
+          // Display companies (first page only)
+          displayCompanies(allCompanies);
+
+          // Hide loading, show companies
+          document.getElementById("loading").classList.add("hidden");
+          document
+            .getElementById("companies-container")
+            .classList.remove("hidden");
+          updateResultsCount();
+
+          // Make sure Load More button is visible if needed
+          if (allCompanies.length > itemsPerPage) {
+            document
+              .getElementById("load-more-container")
+              .classList.remove("hidden");
+          } else {
+            document
+              .getElementById("load-more-container")
+              .classList.add("hidden");
+          }
+        } catch (error) {
+          // console.error("Error:", error);
+          document.getElementById("loading").innerHTML = `
+            <div class="text-red-500">
+              <i class="fas fa-exclamation-circle fa-3x"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4">Failed to load data</h3>
+            <p class="text-gray-500 mt-2">Please try again later or check the data.json file.</p>
+          `;
+        }
       }
 
       // Event listeners
@@ -1083,6 +1267,12 @@
       document
         .getElementById("city-filter")
         .addEventListener("change", filterCompanies);
+      document
+        .getElementById("load-more-btn")
+        .addEventListener("click", loadMoreCompanies);
+      document
+        .getElementById("items-per-page")
+        .addEventListener("change", changeItemsPerPage);
 
       // Load data when page loads
       window.addEventListener("DOMContentLoaded", fetchData);
