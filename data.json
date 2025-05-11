@@ -1,133 +1,122 @@
 [
   {
     "name": "1 Social Media",
-    "email": "hr@1socialmediaagency.com",
-    "website": "http://1socialmediaagency.com/",
-    "description": "1 Social Media is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
+    "email": "info@1socialmediaagency.com",
+    "website": "https://1socialmediaagency.com/",
+    "description": "1 Social Media is an innovative digital company that brings ideas to life. A full featured software development company specialing in UX UI design, development, customization and Enterprise software integration, mobile and web apps for any niche and business size. 1 Social Media is a mobile first software development company, offering our services from 2009.",
     "locations": [
       {
         "city": "Karachi",
-        "address": "Headquarters",
-        "mapLink": ""
+        "address": "Anum Empire، Suite 106, Shaheed-e-Millat Rd, Shahrah-e-Faisal Jinnah Housing Society P.E.C.H.S.",
+        "mapLink": "https://maps.app.goo.gl/4b432Vetxs7GbWqR9"
       }
     ],
-    "businessType": null,
-    "techStack": [],
-    "services": [],
-    "products": [],
-    "hiringStatus": null,
-    "socialLinks": {
-      "linkedin": null,
-      "github": null,
-      "instagram": null,
-      "facebook": null,
-      "careers": null
-    },
-    "last_updated": "2025-05-11"
-  },
-  {
-    "name": "1 Stop Solutions",
-    "email": "hr@1stopsolutionsinc.com",
-    "website": "http://1stopsolutionsinc.com/",
-    "description": "1 Stop Solutions is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
-    "locations": [
-      {
-        "city": "Karachi",
-        "address": "Headquarters",
-        "mapLink": ""
-      }
+    "businessType": "Digital Marketing Agency",
+    "techStack": [
+      "WordPress",
+      "PHP",
+      "HTML/CSS",
+      "JavaScript",
+      "Laravel",
+      "VueJS"
     ],
-    "businessType": null,
-    "techStack": [],
-    "services": [],
+    "services": [
+      "Social Media Marketing",
+      "Web Development",
+      "Content Creation",
+      "SEO",
+      "Graphic Design"
+    ],
     "products": [],
-    "hiringStatus": null,
+    "hiringStatus": "Occasionally Hiring",
     "socialLinks": {
-      "linkedin": null,
+      "linkedin": "https://www.linkedin.com/company/1-social-media-inc.",
       "github": null,
       "instagram": null,
-      "facebook": null,
+      "facebook": "https://www.facebook.com/1smagency/",
       "careers": null
     },
-    "last_updated": "2025-05-11"
+    "last_updated": "2025-05-12"
   },
   {
     "name": "1000solutions",
-    "email": "hr@1000solutions.com",
-    "website": "https://1000solutions.com/",
-    "description": "1000solutions is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
+    "email": "",
+    "website": "",
+    "description": "1000solutions is a technology company based in Karachi, Pakistan, specializing in graphic and website design, brand design, social media management, content writing, and domain/hosting services.",
     "locations": [
       {
         "city": "Karachi",
-        "address": "Headquarters",
+        "address": "",
         "mapLink": ""
       }
     ],
-    "businessType": null,
-    "techStack": [],
-    "services": [],
+    "businessType": "Digital Services Company",
+    "techStack": ["WordPress", "Web Design", "Graphic Design"],
+    "services": [
+      "Website Design",
+      "Brand Design",
+      "Social Media Management",
+      "Content Writing",
+      "Domain & Hosting"
+    ],
     "products": [],
-    "hiringStatus": null,
+    "hiringStatus": "Occasionally Hiring",
     "socialLinks": {
-      "linkedin": null,
+      "linkedin": "https://www.linkedin.com/company/1000solutions",
       "github": null,
       "instagram": null,
       "facebook": null,
       "careers": null
     },
-    "last_updated": "2025-05-11"
+    "last_updated": "2025-05-12"
   },
   {
     "name": "10Pearls",
-    "email": "asadullah.yousuf@10pearls.com",
-    "website": "http://10pearls.com/",
-    "description": "10Pearls is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
+    "email": "info@10pearls.com",
+    "website": "https://10pearls.com/",
+    "description": "10Pearls is an award-winning end-to-end digital technology services company founded in 2004. With offices in multiple countries including Pakistan, they help businesses with innovative product development, digitalization, and modernization through cutting-edge technology solutions.",
     "locations": [
       {
         "city": "Karachi",
-        "address": "Headquarters",
-        "mapLink": ""
-      }
-    ],
-    "businessType": null,
-    "techStack": [],
-    "services": [],
-    "products": [],
-    "hiringStatus": null,
-    "socialLinks": {
-      "linkedin": null,
-      "github": null,
-      "instagram": null,
-      "facebook": null,
-      "careers": null
-    },
-    "last_updated": "2025-05-11"
-  },
-  {
-    "name": "10x Talent",
-    "email": "eric@10xtalent.pk",
-    "website": "https://10xtalent.pk/",
-    "description": "10x Talent is a technology company based in Karachi, Pakistan, specializing in software development and IT services.",
-    "locations": [
+        "address": "3rd Floor (NASTP), Main Shahra-e-Faisal",
+        "mapLink": "https://maps.app.goo.gl/t4ALmvdoUcsjhJ7j8"
+      },
       {
-        "city": "Karachi",
-        "address": "Headquarters",
-        "mapLink": ""
+        "city": "Lahore",
+        "address": "32 Block C/1, Ghalib Road Gulberg-III",
+        "mapLink": "https://maps.app.goo.gl/4hATDa6NLuZAX3Wb6"
+      },
+      {
+        "city": "Islamabad",
+        "address": "4th Floor, One Expressway, Gulberg Greens",
+        "mapLink": "https://maps.app.goo.gl/8Lk1CTUs7mKofw7K8"
       }
     ],
-    "businessType": null,
-    "techStack": [],
-    "services": [],
+    "businessType": "Software Development Company",
+    "techStack": [
+      "AI",
+      "Mobile Development",
+      "Web Development",
+      "Cloud Computing",
+      "Blockchain"
+    ],
+    "services": [
+      "Custom Software Development",
+      "Mobile App Development",
+      "AI Solutions",
+      "DevOps",
+      "UX/UI Design"
+    ],
     "products": [],
-    "hiringStatus": null,
+    "hiringStatus": "Actively Hiring",
     "socialLinks": {
-      "linkedin": null,
-      "github": null,
-      "instagram": null,
-      "facebook": null,
-      "careers": null
+      "linkedin": "https://www.linkedin.com/company/10pearls-pakistan",
+      "github": "https://github.com/10pearls",
+      "instagram": "https://www.instagram.com/10pearls/",
+      "facebook": "https://www.facebook.com/10pearls.pakistan/",
+      "careers": "https://10pearls.com/join-our-team/"
     },
-    "last_updated": "2025-05-11"
+    "last_updated": "2025-05-12"
   },
   {
     "name": "1Click",
